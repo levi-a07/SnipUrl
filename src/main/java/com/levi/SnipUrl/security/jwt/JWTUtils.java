@@ -1,4 +1,4 @@
-package com.levi.SnipUrl.security;
+package com.levi.SnipUrl.security.jwt;
 
 import com.levi.SnipUrl.services.UserDetailsImpl;
 import io.jsonwebtoken.JwtException;
@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpRequest;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
 import java.security.Key;
@@ -16,6 +17,7 @@ import java.time.Instant;
 import java.util.Date;
 import java.util.stream.Collectors;
 
+@Component
 public class JWTUtils {
 
     @Value("${token.expiry-duration}")

@@ -1,4 +1,4 @@
-package com.levi.SnipUrl.security;
+package com.levi.SnipUrl.security.jwt;
 
 public class JWTAuthenticationResponse {
 
